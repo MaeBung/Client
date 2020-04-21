@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{18ab12e7-0d02-42f9-9d01-62f541b71464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{7499f735-352f-4fb4-b316-ee507fe170e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Base\DXUT">
+      <UniqueIdentifier>{a43c5c25-0e86-4a20-b64a-883785ff74fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{46a63701-a9b3-475d-90df-7c5a7e333a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager">
+      <UniqueIdentifier>{3a0e0bb7-6f8d-462a-8690-efd3f200b13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainGame">
+      <UniqueIdentifier>{415fec27-17f5-4630-ab8b-a2c05633a1f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\System">
+      <UniqueIdentifier>{35f83f1f-67b5-40fb-bb43-6a6ffb0fc8de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Time">
+      <UniqueIdentifier>{343f852a-d311-45f6-bed8-bff4395f095d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Time\FPSTimer">
+      <UniqueIdentifier>{615b636b-2cef-4e92-b5d4-b5c10afeb33b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Time\FPSLimiter">
+      <UniqueIdentifier>{7e12271f-7fd2-4b2c-b181-18355976d8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Object">
+      <UniqueIdentifier>{8f68a071-4ded-46d7-8ce7-31d16825dbf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Object\GameObject">
+      <UniqueIdentifier>{aef6bed1-9bda-4420-b9bf-2426ad066701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Object\GameObject\Component">
+      <UniqueIdentifier>{1576e100-5627-49d6-8773-63e808e0ac56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Object\GameObject\Component\Components">
+      <UniqueIdentifier>{8eb5fd5d-a949-4345-8ca5-fe9dce680579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Physics">
+      <UniqueIdentifier>{1ce578bd-ea1f-40ce-80da-e19bfaa0334b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Scene">
+      <UniqueIdentifier>{a7acf015-8709-40af-a50d-1cb284ee72df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Scene\Scene">
+      <UniqueIdentifier>{53c98b71-34c1-46e7-a4b6-394e818e802f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Scene\Scene\Scenes">
+      <UniqueIdentifier>{2e9f2967-180b-4433-b921-2348a6dcd9ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\ThreadPool">
+      <UniqueIdentifier>{eb596700-d921-4e69-9d81-8eded56b60bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Input">
+      <UniqueIdentifier>{00cecfa2-9fa0-4d21-b512-2081f24614bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Graphics">
+      <UniqueIdentifier>{a553914e-0179-4f47-bf2d-823447b3392a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Graphics\Sprite">
+      <UniqueIdentifier>{9cfb533a-f640-479a-b31f-bc59b5e356be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Manager\Data">
+      <UniqueIdentifier>{c503f00e-9c85-4d7e-b75f-2c175ef0b5b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wz">
+      <UniqueIdentifier>{0681331f-029b-4735-b524-9c060f9b49fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXUT\Optional\directx.ico">
+      <Filter>Base\Resource Files</Filter>
+    </None>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmesh.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>Base\DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmesh.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>Base\DXUT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>Classes\Manager\Graphics\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="CComponent.cpp">
+      <Filter>Classes\Manager\Object\GameObject\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CFPSLimiter.cpp">
+      <Filter>Classes\Manager\Time\FPSLimiter</Filter>
+    </ClCompile>
+    <ClCompile Include="CFPSTimer.cpp">
+      <Filter>Classes\Manager\Time\FPSTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObject.cpp">
+      <Filter>Classes\Manager\Object\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>Classes\Manager\Scene\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CThreadPool.cpp">
+      <Filter>Classes\Manager\ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="CTransform.cpp">
+      <Filter>Classes\Manager\Object\GameObject\Component\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CDataManager.cpp">
+      <Filter>Classes\Manager\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="CGraphicsManager.cpp">
+      <Filter>Classes\Manager\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="CInputManager.cpp">
+      <Filter>Classes\Manager\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager.cpp">
+      <Filter>Classes\Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhysicsManager.cpp">
+      <Filter>Classes\Manager\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectManager.cpp">
+      <Filter>Classes\Manager\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MapleStory.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainGame.cpp">
+      <Filter>Main\MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="CSystem.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeManager.cpp">
+      <Filter>Classes\Manager\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\XML\tinyxml2.cpp" />
+    <ClCompile Include="CMapleData.cpp">
+      <Filter>Wz</Filter>
+    </ClCompile>
+    <ClCompile Include="CWzObject.cpp">
+      <Filter>Wz</Filter>
+    </ClCompile>
+    <ClCompile Include="CWzObjectChild.cpp">
+      <Filter>Wz</Filter>
+    </ClCompile>
+    <ClCompile Include="CWzObjectManager.cpp">
+      <Filter>Wz</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSprite.h">
+      <Filter>Classes\Manager\Graphics\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="CComponent.h">
+      <Filter>Classes\Manager\Object\GameObject\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CFPSLimiter.h">
+      <Filter>Classes\Manager\Time\FPSLimiter</Filter>
+    </ClInclude>
+    <ClInclude Include="CFPSTimer.h">
+      <Filter>Classes\Manager\Time\FPSTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameObject.h">
+      <Filter>Classes\Manager\Object\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>Classes\Manager\Scene\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CThreadPool.h">
+      <Filter>Classes\Manager\ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="CTransform.h">
+      <Filter>Classes\Manager\Object\GameObject\Component\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CGraphicsManager.h">
+      <Filter>Classes\Manager\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="CInputManager.h">
+      <Filter>Classes\Manager\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneManager.h">
+      <Filter>Classes\Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhysicsManager.h">
+      <Filter>Classes\Manager\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectManager.h">
+      <Filter>Classes\Manager\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CSingleton.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainGame.h">
+      <Filter>Main\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="CSystem.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="CDataManager.h">
+      <Filter>Classes\Manager\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeManager.h">
+      <Filter>Classes\Manager\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\XML\tinyxml2.h" />
+    <ClInclude Include="CMapleData.h">
+      <Filter>Wz</Filter>
+    </ClInclude>
+    <ClInclude Include="CWzObject.h">
+      <Filter>Wz</Filter>
+    </ClInclude>
+    <ClInclude Include="CWzObjectChild.h">
+      <Filter>Wz</Filter>
+    </ClInclude>
+    <ClInclude Include="CWzObjectManager.h">
+      <Filter>Wz</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="resource.h">
+      <Filter>Base\Resource Files</Filter>
+    </CLInclude>
+    <ResourceCompile Include="MapleStory.rc">
+      <Filter>Base\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
