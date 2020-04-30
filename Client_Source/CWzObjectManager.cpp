@@ -18,10 +18,6 @@ CWzObject * CWzObjectManager::GetWzObject(WzType _Type, string _Name)
 
 void CWzObjectManager::ParseWzObject(WzType _Type, string _Path)
 {
-	tinyxml2::XMLDocument m_xmlDoc;
-	tinyxml2::XMLNode * m_pNode;
-	tinyxml2::XMLElement * m_pElement;
-
 	vector<string> files = GetFilesInFolder(_Path);
 
 	for (auto iter : files)
@@ -30,17 +26,26 @@ void CWzObjectManager::ParseWzObject(WzType _Type, string _Path)
 		{
 			if (HasWzObject(_Type, iter))
 				continue;
-			m_xmlDoc.LoadFile((_Path + iter).c_str());
-			if (!m_xmlDoc.FirstChild())
-				continue;
+			auto f = [=]()
+			{
+				tinyxml2::XMLDocument m_xmlDoc;
+				tinyxml2::XMLNode* m_pNode;
+				tinyxml2::XMLElement* m_pElement;
+				
+				m_xmlDoc.LoadFile((_Path + iter).c_str());
+				if (!m_xmlDoc.FirstChild())
+					return;
 
-			CWzObject * ParentsObject = new CWzObject(iter);
-			WZ.AddWzObject(_Type, iter, ParentsObject);
+				CWzObject * ParentsObject = new CWzObject(iter);
+				WZ.AddWzObject(_Type, iter, ParentsObject);
 
-			m_pNode = m_xmlDoc.FirstChild()->NextSibling();
-			m_pElement = m_pNode->ToElement();
+				m_pNode = m_xmlDoc.FirstChild()->NextSibling();
+				m_pElement = m_pNode->ToElement();
 
-			Parse(ParentsObject, m_pNode->FirstChild());
+				Parse(ParentsObject, m_pNode->FirstChild());
+			};
+
+			thp.EnqueueJob(f);
 		}
 		else
 		{
@@ -74,6 +79,8 @@ vector<string> CWzObjectManager::GetFilesInFolder(string _Path)
 void CWzObjectManager::AddWzObject(WzType _Type, string _Name, CWzObject * _pObject)
 {
 	std::scoped_lock lock(m_mutex);
+	//현재 로딩상황 확인해보기
+	//std::cout << m_mapWzObject[_Type].size() << std::endl;
 
 	m_mapWzObject[_Type].insert(make_pair(_Name, _pObject));
 }

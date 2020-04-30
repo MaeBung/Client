@@ -42,6 +42,8 @@ void ThreadPool::EnqueueJob(std::function<void()> job) {
 	}
 	{
 		std::lock_guard<std::mutex> lock(m_job_q_);
+		//현재 예약된 스레드풀에 예약된 함수의 개수 확인해보기
+		//std::cout << "함수 :" << jobs_.size() << std::endl;
 		jobs_.push(std::move(job));
 	}
 	cv_job_q_.notify_one();
