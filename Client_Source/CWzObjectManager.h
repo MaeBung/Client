@@ -2,6 +2,8 @@
 #include "CSingleton.h"
 #include "CWzObject.h"
 #include "CMapleData.h"
+#include <mutex>
+
 enum WzType
 {
 	CHARACTOR,
@@ -17,6 +19,8 @@ public:
 
 private:
 	map< WzType, map<string,CWzObject*>> m_mapWzObject;
+
+	mutable std::mutex m_mutex;
 
 public:
 	CWzObject* GetWzObject(WzType _Type, string _Name);
@@ -81,6 +85,7 @@ public:
 	vector<string> GetFilesInFolder(string _Path);
 
 	void AddWzObject(WzType _Type, string _Name, CWzObject * _pObject);
+	bool HasWzObject(WzType _Type, string _Name);
 };
 
 #define WZ (*CWzObjectManager::GetInstance())

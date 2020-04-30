@@ -28,8 +28,12 @@ void CWzObjectManager::ParseWzObject(WzType _Type, string _Path)
 	{
 		if (iter.length() > 8 && iter.substr(iter.length() - 8, 8) == ".img.xml")
 		{
-
+			if (HasWzObject(_Type, iter))
+				continue;
 			m_xmlDoc.LoadFile((_Path + iter).c_str());
+			if (!m_xmlDoc.FirstChild())
+				continue;
+
 			CWzObject * ParentsObject = new CWzObject(iter);
 			WZ.AddWzObject(_Type, iter, ParentsObject);
 
@@ -40,7 +44,7 @@ void CWzObjectManager::ParseWzObject(WzType _Type, string _Path)
 		}
 		else
 		{
-			auto f = [&]() { ParseWzObject(_Type, _Path + iter + "/"); };
+			auto f = [=]() { ParseWzObject(_Type, _Path + iter + "/"); };
 			thp.EnqueueJob(f);
 		}
 
@@ -69,5 +73,12 @@ vector<string> CWzObjectManager::GetFilesInFolder(string _Path)
 
 void CWzObjectManager::AddWzObject(WzType _Type, string _Name, CWzObject * _pObject)
 {
+	std::scoped_lock lock(m_mutex);
+
 	m_mapWzObject[_Type].insert(make_pair(_Name, _pObject));
+}
+
+bool CWzObjectManager::HasWzObject(WzType _Type, string _Name)
+{
+	return m_mapWzObject[_Type].find(_Name) != m_mapWzObject[_Type].end();
 }
